@@ -28,7 +28,7 @@ type Users struct {
 
 type Social struct {
 	Facebook string `json:"facebook"`
-	Twittr   string `json:twitter`
+	Twitter  string `json:twitter`
 }
 
 type User struct {
@@ -53,6 +53,7 @@ func ReadJson() {
 			fmt.Println("User Age: " + strconv.Itoa(users.Users[i].Age))
 			fmt.Println("User Name: " + users.Users[i].Name)
 			fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
+			fmt.Println("Twitter Url: " + users.Users[i].Social.Twitter)
 		}
 	}
 
