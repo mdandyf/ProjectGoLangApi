@@ -12,7 +12,11 @@ func main() {
 	//player.Name = "Morgan"
 	//player.PlayGuitar()
 
-	function.CheckJson()
+	//function.CheckJson()
 
-	function.ReadJson()
+	//function.ReadJson()
+
+	//function.handleRequest()
+
+	function.HandleRequest()
 }

@@ -58,3 +58,16 @@ func ReadJson() {
 	}
 
 }
+
+func ReadJsonString() string {
+	jsonFile, err := os.Open("./jsonfiles/users.json")
+	if err != nil {
+		fmt.Println(err)
+		return ""
+	} else {
+		byteValue, _ := ioutil.ReadAll(jsonFile)
+		json.Unmarshal(byteValue, &users)
+		data, _ := json.Marshal(users)
+		return string(data)
+	}
+}
