@@ -15,7 +15,7 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Endpoint Hit: /homePage")
 }
 
-func getJsonPage(w http.ResponseWriter, r *http.Request) {
+func getJSONPage(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, ReadJsonString())
 	fmt.Println("Endpoint Hit: /getJson")
 }
@@ -25,7 +25,7 @@ func HandleRequest() {
 	fmt.Println("Start Server on port " + port)
 
 	http.HandleFunc("/", homePage)
-	http.HandleFunc("/getJson", getJsonPage)
+	http.HandleFunc("/getJson", getJSONPage)
 
 	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
